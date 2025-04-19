@@ -3,5 +3,11 @@
   "extends": "./base.json",
   "compilerOptions": {
     "jsx": "react-jsx"
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ]
   }
 }
