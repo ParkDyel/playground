@@ -9,6 +9,8 @@ interface IFireModalProps<T> {
   action?: 'escape' | 'overlay';
 }
 
+export type { IFireModalProps };
+
 export default function useModal<T = any>() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [resolve, setResolve] =
@@ -35,9 +37,7 @@ export default function useModal<T = any>() {
     handleModalClose,
     ModalWrap: ({ children }: { children: React.ReactNode }) =>
       isModalOpen ? (
-        <Modal<T> onClose={handleModalClose}>{children}</Modal>
+        <Modal.Modal<T> onClose={handleModalClose}>{children}</Modal.Modal>
       ) : null,
   };
 }
-
-export type { IFireModalProps };

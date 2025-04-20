@@ -9,7 +9,9 @@ export default function Overlay({
 }: IOverlayProps) {
   return (
     <div
-      className="absolute top-0 left-0 z-[calc(var(--z-index-modal)-1)] w-full h-full"
+      role="button"
+      tabIndex={-1}
+      className="ui-fixed ui-inset-0 ui-w-full ui-h-full ui-backdrop-blur-[2px]"
       style={{ backgroundColor: overlayBackgroundColor }}
       onClick={onClose}
     />

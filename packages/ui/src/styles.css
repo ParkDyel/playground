@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --z-modal: 100;
+  }
+
+  h1 {
+    @apply ui-font-bold ui-text-6xl ui-leading-normal;
+  }
+
+  h2 {
+    @apply ui-font-semibold ui-text-5xl ui-leading-normal;
+  }
+
+  h3 {
+    @apply ui-font-semibold ui-text-4xl ui-leading-normal;
+  }
+
+  h4 {
+    @apply ui-font-semibold ui-text-3xl ui-leading-normal;
+  }
+
+  h5 {
+    @apply ui-font-semibold ui-text-2xl ui-leading-normal;
+  }
+
+  h6 {
+    @apply ui-font-semibold ui-text-xl ui-leading-normal;
+  }
+}

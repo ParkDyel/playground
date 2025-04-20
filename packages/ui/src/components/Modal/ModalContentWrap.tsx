@@ -1,17 +1,18 @@
-import React from 'react';
-
-interface ModalContentWrapProps {
+interface IModalContentWrapProps {
   children: React.ReactNode;
 }
 
-const ModalContentWrap: React.FC<ModalContentWrapProps> = ({ children }) => {
+const ModalContentWrap = ({ children }: IModalContentWrapProps) => {
   return (
-    <div
-      className="absolute top-1/2 left-1/2 z-[var(--z-index-modal)] w-fit transform -translate-x-1/2 -translate-y-1/2"
+    <section
+      role="dialog"
+      className="ui-bg-modal-content ui-p-8 ui-rounded-xl ui-z-[1]"
     >
       {children}
-    </div>
+    </section>
   );
 };
 
 export default ModalContentWrap;
+
+export type { IModalContentWrapProps };

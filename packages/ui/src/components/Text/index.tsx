@@ -1,9 +1,13 @@
-import { type ReactNode } from "react";
+import Box, { type IBoxProps } from "../Box";
 
-interface TextProps {
-  children: ReactNode;
-}
+export interface ITextProps<T extends React.ElementType> extends IBoxProps<T> { }
 
-export const Text = ({ children }: TextProps) => {
-  return children;
+const Text = <T extends React.ElementType,>({ children, as }: ITextProps<T>) => {
+  return (
+    <Box as={as || 'span'}>
+      {children}
+    </Box>
+  );
 };
+
+export default Text;

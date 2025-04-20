@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css"  //or import 'tailwindcss/tailwind.css'
 
+import "./globals.css"  //or import 'tailwindcss/tailwind.css'
 import "@repo/ui/styles.css";
 
 export const metadata: Metadata = {

@@ -25,6 +25,10 @@ function Portal({ children, selector = 'modal', parent }: PortalProps) {
       element.style.left = '0';
       element.style.width = '100%';
       element.style.height = '100%';
+      element.style.zIndex = "var(--z-modal)";
+      element.style.display = 'flex';
+      element.style.justifyContent = 'center';
+      element.style.alignItems = 'center';
 
       root.appendChild(element);
 

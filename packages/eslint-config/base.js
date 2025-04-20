@@ -20,6 +20,7 @@ export const config = [
     rules: {
       "turbo/no-undeclared-env-vars": "warn",
       "indent": ["error", 2],
+      "@typescript-eslint/consistent-type-imports": "error"
     },
   },
   {

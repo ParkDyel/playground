@@ -1,23 +1,23 @@
 // ModalWrapper.tsx
 
 import { type ReactNode, useEffect } from 'react';
-
 import { type IFireModalProps } from '@/hooks/useModal';
 
 import Overlay from './ModalOverlay';
 import Portal from './ModalPortal';
+import ContentWrap from './ModalContentWrap';
 
-type ModalWrapperProps<T> = {
+interface IModalProps<T> {
   children?: ReactNode;
   onClose: (event: IFireModalProps<T>) => void;
   parent?: HTMLElement;
 };
 
-export default function Modal<T>({
+const Modal = <T,>({
   children,
   onClose,
   parent,
-}: ModalWrapperProps<T>) {
+}: IModalProps<T>) => {
   const handleOverlayClick = () =>
     onClose({
       type: 'close',
@@ -46,4 +46,9 @@ export default function Modal<T>({
       {children}
     </Portal>
   );
+}
+
+export default {
+  Modal,
+  ContentWrap,
 }

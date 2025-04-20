@@ -5,7 +5,7 @@ const config: Omit<Config, "content"> = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#c094f6",
+          default: "#c094f6",
           dark: "#522281",
           50: "#faf6fe",
           100: "#f2e9fe",
@@ -19,8 +19,15 @@ const config: Omit<Config, "content"> = {
           900: "#522281",
           950: "#360c5f",
         },
+        modal: {
+          content: '#ffffff',
+          overlay: 'rgba(11,11,11,0.2)'
+        }
+      },
+      zIndex: {
+        modal: "100"
       }
-    }
+    },
   },
   plugins: []
 };
