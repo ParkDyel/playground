@@ -1,84 +1,21 @@
-# Turborepo starter
+# Playground
 
-This Turborepo starter is maintained by the Turborepo core team.
+## 이 프로젝트는
 
-## Using this example
+회사에서는 다른 스택을 사용하고 있거나, 다른 개발자가 작업한 부분을 직접 시도해 보는 프로젝트입니다.
 
-Run the following command:
+현재 시도 중인 스택은 다음과 같습니다.
+- tailwind
+  - styled(emotion)와 같은 css-in-js에 익숙하여 대표적인 다른 방식인 tailwind를 시도 중 입니다.
+  - 개발 처음 시작할때 OOCSS 방법론을 선호했어서 익숙하다면 익숙할 수 있지만, 그 이후 css-in-js만 사용했어서, 아직 tailwind의 classname이 생소합니다.
+- turborepo
+  - 다른 개발자가 구축한 프로젝트를 사용만 해봐서 직접 구축해보고자 합니다.
+  - tailwind를 각 프로젝트마다 연동하는 것부터 고생이었습니다.
+    - 사용되는 클래스만 빌드 되다보니, pnpm run dev --filter=user를 하면 ui 패키지의 classnames을 추가해도 반영되지 않습니다.
 
-```sh
-npx create-turbo@latest
-```
+## 이 프로젝트를 위해
 
-## What's inside?
+아래 목록을 참고하였습니다.
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+[vercel example github](https://github.com/vercel/turborepo/blob/main/examples/with-tailwind/packages/ui/src/card.tsx)
+[tailwindcss doc](https://tailwindcss.com/docs/clear)
