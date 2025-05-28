@@ -18,9 +18,9 @@ export const config = [
       turbo: turboPlugin,
     },
     rules: {
-      "turbo/no-undeclared-env-vars": "warn",
-      "indent": ["error", 2],
-      "@typescript-eslint/consistent-type-imports": "error"
+      'turbo/no-undeclared-env-vars': 'warn',
+      indent: ['error', 2],
+      '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
   {
@@ -29,6 +29,6 @@ export const config = [
     },
   },
   {
-    ignores: ["dist/**"],
+    ignores: ['dist/**'],
   },
 ];

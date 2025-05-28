@@ -19,16 +19,23 @@ const config: Omit<Config, "content"> = {
           900: "#522281",
           950: "#360c5f",
         },
+        text: {
+          default: "#212529",
+          light: "#e9ecef",
+          dark: "#343a40",
+          placeholder: "#adb5bd",
+          disabled: "#ced4da",
+        },
         modal: {
-          content: '#ffffff',
-          overlay: 'rgba(11,11,11,0.2)'
-        }
+          content: "#ffffff",
+          overlay: "rgba(11,11,11,0.2)",
+        },
       },
       zIndex: {
-        modal: "100"
-      }
+        modal: "100",
+      },
     },
   },
-  plugins: []
+  plugins: [],
 };
 export default config;

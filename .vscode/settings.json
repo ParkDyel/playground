@@ -1,4 +1,13 @@
 {
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
   "eslint.workingDirectories": [
     {
       "mode": "auto"
