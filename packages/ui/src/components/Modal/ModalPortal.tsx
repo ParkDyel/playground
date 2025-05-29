@@ -20,11 +20,11 @@ function Portal({ children, selector = 'modal', parent }: PortalProps) {
       element = document.createElement('div');
       element.id = selector;
 
-      element.style.position = 'absolute';
+      element.style.position = 'fixed';
       element.style.top = '0';
       element.style.left = '0';
       element.style.width = '100%';
-      element.style.height = '100%';
+      element.style.height = '100dvh';
       element.style.zIndex = "var(--z-modal)";
       element.style.display = 'flex';
       element.style.justifyContent = 'center';

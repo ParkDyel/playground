@@ -18,7 +18,7 @@ export default function useModal<T = any>() {
 
   const handleModalOpen = useCallback(() => {
     setIsModalOpen(true);
-    return new Promise<T | null>(res => setResolve(() => res));
+    return new Promise<IFireModalProps<T>>(res => setResolve(() => res));
   }, []);
 
   const handleModalClose = useCallback(
