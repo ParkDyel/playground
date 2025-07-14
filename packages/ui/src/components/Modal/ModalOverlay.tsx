@@ -11,7 +11,7 @@ export default function Overlay({
     <div
       role="button"
       tabIndex={-1}
-      className="ui-fixed ui-inset-0 ui-w-full ui-h-full ui-backdrop-blur-[2px]"
+      className="ui-fixed ui-inset-0 ui-w-full ui-h-full ui-backdrop-blur-[2px] ui-z-[-1]"
       style={{ backgroundColor: overlayBackgroundColor }}
       onClick={onClose}
     />

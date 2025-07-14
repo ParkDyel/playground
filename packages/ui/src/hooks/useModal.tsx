@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 
 import Modal from '@/components/Modal';
+import { AnimatePresence, motion } from "motion/react";
 
 interface IFireModalProps<T> {
   type: 'close' | 'confirm' | 'cancel';
@@ -36,8 +37,16 @@ export default function useModal<T = any>() {
     handleModalOpen,
     handleModalClose,
     ModalWrap: ({ children }: { children: React.ReactNode }) =>
-      isModalOpen ? (
-        <Modal.Modal<T> onClose={handleModalClose}>{children}</Modal.Modal>
-      ) : null,
+      <AnimatePresence>
+        {isModalOpen ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+          >
+            <Modal.Modal<T> onClose={handleModalClose}>{children}</Modal.Modal>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>,
   };
 }
