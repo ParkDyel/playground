@@ -7,4 +7,9 @@ export default {
     ...nextJsConfig.rules,
     "indent": ["error", 2],
   },
+  settings:{
+    "better-tailwindcss": {
+      entryPoint: "app/global.css",
+    },
+  }
 };
